@@ -13,7 +13,10 @@ class LogHistoryController extends Controller
 
     public function cgJson()
     {
-        $data = LogHistory::get(['log_history.*']);
+        $data = LogHistory::
+        leftJoin('pmmodule', 'log_history.id_pmmodule', '=', 'pmmodule.id_pmmodule')
+        ->get(['log_history.*', 'pmmodule.txtModuleName as moduleName']);
+
         return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action', function ($row) {

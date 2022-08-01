@@ -14,7 +14,7 @@
             </div>
             <div class="panel-wrapper collapse in">
                 <div class="panel-body">
-                    <button class="btn btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-user" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add User</span></button>
+                    <button class="btn btn-sm btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-user" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add User</span></button>
                         {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-user" data-whatever="@mdo">Add User</button> --}}
                     <div class="table-wrap">
                         <div class="table-responsive">
@@ -24,7 +24,7 @@
                                         <th>No</th>
                                         <th>ID PM Module</th>
                                         <th>Module Name</th>
-                                        <th>ID Locater</th>
+                                        <th>Locater</th>
                                         <th>Active</th>
                                         <th>Insert By</th>
                                         <th>Update By</th>
@@ -112,7 +112,7 @@
                 data: 'txtModuleName'
             },
             {
-                data: 'id_locater'
+                data: 'locname'
             },
             {
                 data: 'bitActive'

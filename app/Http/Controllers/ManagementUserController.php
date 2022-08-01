@@ -39,7 +39,6 @@ class ManagementUserController extends Controller
             'password' => 'required', 
             'bitActive' => 'required',
         ]);
-
         
         DB::beginTransaction();
         try {

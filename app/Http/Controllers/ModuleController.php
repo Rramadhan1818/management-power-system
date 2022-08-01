@@ -14,7 +14,8 @@ class ModuleController extends Controller
 
     public function cgJson()
     {
-        $data = Module::get(['pmmodule.*']);
+        $data = Module::leftJoin('locater', 'pmmodule.id_locater', '=', 'locater.id_locater')->get(['pmmodule.*', 'locater.txtLocaterName as locname']);
+        
         return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action', function ($row) {

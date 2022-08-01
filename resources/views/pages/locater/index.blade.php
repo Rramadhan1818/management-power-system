@@ -14,7 +14,7 @@
             </div>
             <div class="panel-wrapper collapse in">
                 <div class="panel-body">
-                    {{-- <button class="btn btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-user" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add Locater</span></button> --}}
+                    <button class="btn btn-sm btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-user" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add Locater</span></button> 
                     <div class="table-wrap">
                         <div class="table-responsive">
                             <table id="tbl_locater" class="table table-hover display  pb-30" >

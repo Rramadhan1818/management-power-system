@@ -79,44 +79,51 @@
 
 @push('script')
 <script type="text/javascript">
-                var dtJson = $('#tbl_user').DataTable({
-                    ajax: "{{ route('user.get') }}",
-                    autoWidth: false,
-                    serverSide: true,
-                    processing: true,
-                    // aSorting: [
-                    //     [0, "desc"]
-                    // ],
-                    searching: true,
-                    displayLength: 10,
-                    lengthMenu: [10, 25, 50, 100],
-                    language: {
-                        paginate: {
-                            previous: '&nbsp;',
-                            next: '&nbsp;'
-                        }
-                    },
-                    columns: [
-                        {
-                            data: 'DT_RowIndex', name: 'DT_RowIndex'
-                        },
-                        {
-                            data: 'txtfullname'
-                        },
-                        {
-                            data: 'txtusername'
-                        },
-                        {
-                            data: 'password'
-                        },
-                        {
-                            data: 'bitActive'
-                        },
-                        {
-                            data: 'action'
-                        }
-                    ],
-                });
+   
+        $('#tbl_user').DataTable({
+            ajax: "{{ route('user.get') }}",
+            autoWidth: false,
+            serverSide: true,
+            processing: true,
+            // aSorting: [
+            //     [0, "desc"]
+            // ],
+            searching: true,
+            displayLength: 10,
+            lengthMenu: [10, 25, 50, 100],
+            language: {
+                paginate: {
+                    previous: '&nbsp;',
+                    next: '&nbsp;'
+                }
+            },
+            columns: [
+                {
+                    data: 'DT_RowIndex', name: 'DT_RowIndex'
+                },
+                {
+                    data: 'txtfullname'
+                },
+                {
+                    data: 'txtusername'
+                },
+                {
+                    data: 'password'
+                },
+                {
+                    data: 'bitActive'
+                },
+                {
+                    data: 'action'
+                }
+            ],
+        });
+    
+    
+
+    $( document ).ready(function() {
+        
+    });
         
 </script>
 
