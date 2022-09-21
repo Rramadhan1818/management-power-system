@@ -22,6 +22,8 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', 'AuthController@getLogout')->name('logout');
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+    Route::get('/get-master', 'DashboardController@getJson')->name('get.master');    
+
 
     // User Management
     Route::get('/management-user', 'ManagementUserController@index')->name('management-user.index');  

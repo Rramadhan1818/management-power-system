@@ -8,14 +8,14 @@
             <li>
                 <a class="{{ request()->is('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}"><div class="pull-left"><i class="zmdi zmdi-landscape mr-20"></i><span class="right-nav-text">Dasboard</span></div><div class="clearfix"></div></a>
              </li>
+             <li>
+                 <a class="{{ request()->is('locater') ? 'active' : '' }}" href="{{ route('locater.index') }}"><div class="pull-left"><i class="fa fa-bolt mr-20"></i><span class="right-nav-text">Locater</span></div><div class="clearfix"></div></a>
+             </li>
+             <li>
+                 <a class="{{ request()->is('pmmodule') ? 'active' : '' }}" href="{{ route('module.index') }}"><div class="pull-left"><i class="fa fa-tasks mr-20"></i><span class="right-nav-text">PM Module</span></div><div class="clearfix"></div></a>
+            </li>
             <li>
                 <a class="{{ request()->is('log-history') ? 'active' : '' }}" href="{{ route('log-history.index') }}"><div class="pull-left"><i class="fa fa-history mr-20"></i><span class="right-nav-text">Log History</span></div><div class="clearfix"></div></a>
-            </li>
-            <li>
-                <a class="{{ request()->is('locater') ? 'active' : '' }}" href="{{ route('locater.index') }}"><div class="pull-left"><i class="fa fa-bolt mr-20"></i><span class="right-nav-text">Locater</span></div><div class="clearfix"></div></a>
-            </li>
-            <li>
-                <a class="{{ request()->is('pmmodule') ? 'active' : '' }}" href="{{ route('module.index') }}"><div class="pull-left"><i class="fa fa-tasks mr-20"></i><span class="right-nav-text">PM Module</span></div><div class="clearfix"></div></a>
             </li>
             <li>
                 <a class="{{ request()->is('management-user') ? 'active' : '' }}" href="{{ route('management-user.index') }}"><div class="pull-left"><i class="fa fa-group mr-20"></i><span class="right-nav-text">Management User</span></div><div class="clearfix"></div></a>

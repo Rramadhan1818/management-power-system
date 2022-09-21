@@ -76,10 +76,27 @@
 	<script src="{{ asset('droopy/vendors/bower_components/bootstrap-daterangepicker/daterangepicker.js')}}"></script>
 	
 	<!-- Form Picker Init JavaScript -->
-	<script src="{{ asset('droopy/dist/js/form-picker-data.js') }}"></script>
+	{{-- <script src="{{ asset('droopy/dist/js/form-picker-data.js') }}"></script> --}}
 	
-	{{-- CDN MQTT PAHO --}}
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+	<script src="{{ asset('droopy/dist/js/bootstrap-datepicker.min.js') }}"></script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+	{{-- CDN MQTT PAHO --}}
+	<script src="{{ asset('droopy/dist/js/paho-mqtt.js') }}" type="text/javascript"></script>
+
+	<script>
+	
+	</script>
 	@stack('script')
 		

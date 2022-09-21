@@ -19,9 +19,8 @@ class ModuleController extends Controller
         return Datatables::of($data)
             ->addIndexColumn()
             ->addColumn('action', function ($row) {
-             $btn =  '<button class="btn btn-danger btn-sm btn-icon-anim btn-circle"><i class="icon-trash"></i></button>';
-            // $btn = '<button class="btn btn-inverse-success btn-icon mr-1" data-toggle="modal" data-target="#modal-edit"><i class="icon-file menu-icon"></i></button>';
-            // $btn = $btn . '<button data-id="" class="btn btn-inverse-danger btn-icon member-hapus mr-1" data-toggle="modal" data-target="#modal-hapus"><i class="icon-trash"></i></button>';
+            $btn =   '<button class="btn btn-success btn-sm btn-icon-anim btn-circle" data-toggle="modal" data-target="#modal-edit" style="margin-right: 4px !important;"><i class="icon-pencil"></i></button>';
+            $btn =  $btn .  '<button class="btn btn-danger btn-sm btn-icon-anim btn-circle"><i class="icon-trash"></i></button>';
                 return $btn;
             })
             ->addIndexColumn()

@@ -24,13 +24,13 @@
                                         <th>No</th>
                                         <th>ID Log History</th>
                                         <th>PM Module</th>
-                                        <th>Output Voltage</th>
-                                        <th>Output Current</th>
-                                        <th>Output Power</th>
-                                        <th>Output Power Total</th>
+                                        <th>Output Voltage (Volt)</th>
+                                        <th>Output Current (W)</th>
+                                        <th>Output Power (Kwh)</th>
+                                        <th>Output Power Total (Kwh)</th>
                                         <th>Created At</th>
                                         <th>Updated At</th>
-                                        <th>Active</th>
+                                        <th width="10%">Active</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -50,30 +50,45 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title" id="add-userLabel1">New message</h5>
+                <h5 class="modal-title" id="add-userLabel1">Log History Energy</h5>
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group">
-                        <label for="txtfullname" class="control-label mb-10">Name</label>
-                        <input type="text" class="form-control" id="txtfullname" name="txtfullname">
+                    <div class="form-group col-md-12">
+                        <label for="id_pmmodule">PM Module</label>
+                        <select class="form-control" id="id_pmmodule" name="id_pmmodule">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <label for="txtusername" class="control-label mb-10">Username</label>
-                        <input type="text" class="form-control" id="txtusername" name="txtusername">
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="intOutputVoltage" class="control-label mb-10">Output Voltage (Volt)</label>
+                                <input type="number" class="form-control" id="intOutputVoltage" name="intOutputVoltage">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="intOutputCurrent" class="control-label mb-10">Output Current (W)</label>
+                                <input type="number" class="form-control" id="intOutputCurrent" name="intOutputCurrent">
+                            </div>
                     </div>
-                    <div class="form-group">
-                        <label for="password" class="control-label mb-10">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="form-group">
-                        <label for="bitActive" class="control-label mb-10">Active</label>
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="intOutputPower" class="control-label mb-10">Output Power (Kwh)</label>
+                                <input type="number" class="form-control" id="intOutputPower" name="intOutputPower">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="intOutputPowerTotal" class="control-label mb-10">Output Power Total (KWh)</label>
+                                <input type="number" class="form-control" id="intOutputPowerTotal" name="intOutputPowerTotal">
+                            </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
+                <button type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>
@@ -85,8 +100,27 @@
 @push('script')
 
 <script type="text/javascript">
+// $.fn.dataTable.moment('M/D/YYYY');
+
     var dtJson = $('#tbl_log_history').DataTable({
         ajax: "{{ route('log-history.get') }}",
+        fields: [
+            {
+                label:  'Created At',
+                name:   'created_at',
+                type:   'datetime',
+                // def:    function () { return new Date(); },
+                format: 'M/D/YYYY',
+            }, {
+                label:  'Updated At',
+                name:   'updated_at',
+                type:   'datetime',
+                // def:    function () { return new Date(); },
+                format: 'M/D/YYYY',
+                // fieldInfo: 'Verbose date format',
+                // keyInput: false
+            }
+        ],
         autoWidth: false,
         serverSide: true,
         processing: true,

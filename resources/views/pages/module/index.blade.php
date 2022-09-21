@@ -14,8 +14,8 @@
             </div>
             <div class="panel-wrapper collapse in">
                 <div class="panel-body">
-                    <button class="btn btn-sm btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-user" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add User</span></button>
-                        {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-user" data-whatever="@mdo">Add User</button> --}}
+                    <button class="btn btn-sm btn-primary btn-lable-wrap left-label"  data-toggle="modal" data-target="#add-module" data-whatever="@mdo"> <span class="btn-label"><i class="fa fa-pencil"></i> </span><span class="btn-text">Add PM Module</span></button>
+                        {{-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-module" data-whatever="@mdo">Add User</button> --}}
                     <div class="table-wrap">
                         <div class="table-responsive">
                             <table id="tbl_module" class="table table-hover display  pb-30" >
@@ -30,7 +30,7 @@
                                         <th>Update By</th>
                                         <th>Created At</th>
                                         <th>Updated At</th>
-                                        <th>Action</th>
+                                        <th width="10%">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -45,35 +45,41 @@
 </div>
 <!-- /Row -->
 
-<div class="modal fade" id="add-user" tabindex="-1" role="dialog" aria-labelledby="add-userLabel1">
+<div class="modal fade" id="add-module" tabindex="-1" role="dialog" aria-labelledby="add-moduleLabel1">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h5 class="modal-title" id="add-userLabel1">New message</h5>
+                <h5 class="modal-title" id="add-moduleLabel1">Power Meter Module</h5>
             </div>
             <div class="modal-body">
                 <form>
                     <div class="form-group">
-                        <label for="txtfullname" class="control-label mb-10">Name</label>
-                        <input type="text" class="form-control" id="txtfullname" name="txtfullname">
+                        <label for="txtModuleName" class="control-label mb-10">Module Name</label>
+                        <input type="text" class="form-control" id="txtModuleName" name="txtModuleName">
                     </div>
                     <div class="form-group">
-                        <label for="txtusername" class="control-label mb-10">Username</label>
-                        <input type="text" class="form-control" id="txtusername" name="txtusername">
+                        <label for="id_locater">Locater</label>
+                        <select class="form-control" id="id_locater" name="id_locater">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                    </div>
+                    <div class="form-group mb-0">
+                        <label for="bitActive" class="control-label mb-10">Is Active?</label>
                     </div>
                     <div class="form-group">
-                        <label for="password" class="control-label mb-10">Password</label>
-                        <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="form-group">
-                        <label for="bitActive" class="control-label mb-10">Active</label>
+                        <input type="checkbox" class="form-check-input" id="bitActive" name="bitActive">
+                        <label class="form-check-label" for="bitActive">Active</label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Send message</button>
+                <button type="button" class="btn btn-primary">Save</button>
             </div>
         </div>
     </div>

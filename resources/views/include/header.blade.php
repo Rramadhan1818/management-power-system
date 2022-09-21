@@ -5,7 +5,7 @@
             <div class="logo-wrap">
                 <a href="{{ route('dashboard') }}">
                     <img class="brand-img" src="../img/logo.png" alt="brand"/>
-                    <span class="brand-text">Power Manager</span>
+                    <span class="brand-text" style="font-size: 16px;">Power Management</span>
                 </a>
             </div>
         </div>	
